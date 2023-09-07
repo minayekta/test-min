@@ -1,0 +1,79 @@
+#section3{
+    width: 100%;
+    height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.section3-center{
+    width:100%;
+    height: 70%;
+    /* background-color: aqua; */
+    overflow: hidden;
+    position: relative;
+    background-image: url(../img/beschpreschung.PNG);
+    background-position: center;
+    background-size: cover;
+}
+.section3-center img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    /* z-index: -9; */
+}
+.section3-center-cover{
+    width: 100%;
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+}
+.section3-center-cover img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+    border: none;
+    background-color: #9b9b9b7f;
+    object-fit: cover;
+}
+.card-top{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        flex-shrink: 0;
+        border: none;
+        /* position: absolute; */
+        background-color: #f8f8f87f;
+        object-fit: cover;
+}
+.card-item{
+    background-color: #fff;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+    margin-top: 120px;
+    bottom: 0;
+    border-radius: 10px;
+}
+.card-item p{
+    font-size: 32px;
+font-weight: 700;
+}
+#section3 h1{
+    /* font-size: 10vmax; */
+    font-size: 16vmax;
+    position: absolute;
+    bottom: 0%;
+    line-height: 1.1;
+    left:11%;
+    z-index: 99999;
+    color: white;
+}

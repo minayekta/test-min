@@ -1,0 +1,37 @@
+.form-section {
+    /* height: 100vh; */
+}
+.reveal {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1.3s all ease;
+  }
+  
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .active.fade-left {
+    animation: fade-left 1.3s ease-in;
+  }
+  .active.fade-right {
+    animation: fade-right 1.3s ease-in;
+  }
+  .active.fade-left-2 {
+    animation: fade-left 2s ease-in;
+  }
+  .active.fade-right-2 {
+    animation: fade-right 2s ease-in;
+  }
+  .fadeout {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 1.3s all ease;
+  }
+  .active.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }

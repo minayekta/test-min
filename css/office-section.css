@@ -1,0 +1,35 @@
+  /*  */
+  html,
+body {
+    background:#e5e5e5 !important ;
+}
+  .zoom-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 940px;
+}
+
+.zoom-text {
+    font-size: 64px;
+    text-align: center;
+    cursor: pointer;
+    transform-origin: center center;
+}
+/*  */
+.office-section{
+  height: 200px;
+}
+
+ .card-office{
+    padding: 32px !important;
+    background-color: #fff;
+    height: 100%;
+    margin: auto;
+}
+ .border-radius-card{
+    border-radius: 20px !important;
+}
+.title-join{
+    margin-bottom: 80px;
+}

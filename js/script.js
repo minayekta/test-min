@@ -1,52 +1,116 @@
-const { innerHeight } = window
-//zoom-in text section 1
+$(function () {
+  gsap.registerPlugin(ScrollTrigger);
+  
 
-//     // Calculate the scale factor based on scroll percentage
-//     const scaleFactor = 1 + (scrollPercentage / 10);
-gsap.to('#zoom-in h2', {
-  scale: 100,
-  stagger: 0.1,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '#zoom-in',
-    pin: true,
-    end: `+=${innerHeight * 0.6}`,
-    scrub: 3,
-  },
-})
 
-function reveal() {
-  var reveals = document.querySelectorAll('.reveal')
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight
-    var elementTop = reveals[i].getBoundingClientRect().top
-    var elementVisible = 400
+  gsap.to("#larger-title", {
+    scrollTrigger: {
+      trigger: "#larger-title",
+      scrub: true,
+      pin: true,
+      start: "center center",
+      end: "+=1000",
+      ease: "power2",
+    },
+    scale: 4.5,
+    opacity: 0,
+    height: 0,
+  });
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add('active')
-    } else {
-      reveals[i].classList.remove('active')
+  // CONNETCT OFFICES (behind titles)
+  gsap.to(".go-connect", {
+    scrollTrigger: {
+      trigger: ".go-connect",
+      scrub: true,
+      pin: true,
+      start: "center center",
+      end: "+=2500",
+      ease: "power2",
+    },
+  });
+
+  gsap.to(".go-connect", {
+    scrollTrigger: {
+      trigger: ".go-connect",
+      scrub: true,
+      start: "center center",
+      end: "+=300",
+      ease: "power2",
+    },
+    opacity:1,
+  });
+
+
+
+
+
+
+  // 
+
+  gsap.to(".connect-title", {
+    scrollTrigger: {
+      trigger: ".go-connect",
+      scrub: true,
+      start: "center center",
+      end: "+=500",
+      ease: "power2",
+    },
+    y:"-200px",
+  });
+
+  gsap.to(".office-posters-wrap", {
+    scrollTrigger: {
+      trigger: ".go-connect",
+      scrub: true,
+      start: "center center",
+      end: "+=500",
+    },
+    y:"-400px",
+    opacity:1,
+    duration:10,
+    ease: Linear.easeNone
+  });
+
+  gsap.to(".office-2", {
+    scrollTrigger: {
+      trigger: ".office-2",
+      scrub: true,
+      start: "center center",
+      end: "+=500",
+      ease: "power2",
+    },
+    y:"-490px",
+  });
+
+  gsap.to(".office-3", {
+    scrollTrigger: {
+      trigger: ".office-3",
+      scrub: true,
+      start: "center center",
+      end: "+=500",
+      ease: "power2",
+    },
+    y:"-980px",
+  });
+
+  
+  $(window).scroll(function () {
+    let topToElement = $(".space-test").offset().top,
+      heightElement = $(".space-test").outerHeight(),
+      windowHeight = $(window).height(),
+      scrollFromTop = $(this).scrollTop();
+      let howMuchTrigger = topToElement - windowHeight
+    if (scrollFromTop > howMuchTrigger  && scrollFromTop - howMuchTrigger < 300 ) {
+      $(".moving-form .image-part").removeClass("separated")
+      $(".moving-form .form-part").removeClass("separated")
     }
-  }
-}
-
-window.addEventListener('scroll', reveal)
+  });
 
 
-// gsap.registerPlugin(ScrollTrigger)
 
-// let tl = gsap.timeline({
-//   ScrollTrigger: {
-//     trigger: '.cards',
-//     markers: true,
-//     start: '.cards',
-//     scrub:true,
-//     ease:"cards.easeOut",
-//     toggleActions: "play none none reverse",
-//   },
-// })
 
-// tl.from('.card1', 1, {y: 100, opacity: 0,duration: 20})
-// tl.from('.card2', 1, {y: 100,opacity: 0,duration:2})
-// tl.from('.card3', 1, {y: 100,opacity: 0,duration:3})
+
+});
+
+
