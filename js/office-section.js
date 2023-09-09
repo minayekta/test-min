@@ -1,11 +1,11 @@
-$(function () {
+
     gsap.registerPlugin(ScrollTrigger);
     
   
    
     gsap.to(".zoom-text", {
         scrollTrigger: {
-          trigger: "#larger-title",
+          trigger: ".zoom-section",
           scrub: true,
           pin: true,
           start: "center center",
@@ -35,36 +35,37 @@ $(function () {
 
       gsap.to(".title-join", {
         scrollTrigger: {
-          trigger: ".connect-title",
+          trigger: ".office-section",
           scrub: true,
           start: "center center",
           end: "+=500",
           ease: "power2",
+         duration:1
         },
-        y:"-500px",
+        y:"-20px",
       });
 
     
       gsap.to(".office-1", {
         scrollTrigger: {
-          trigger: ".office-1",
+          trigger: ".office-posters-wrap",
           scrub: true,
           start: "center center",
-          end: "bottom -40%",
+          end: "bottom 0%",
           ease: "power2",
         },
-        y:"-490px",
+        y:"-90px",
       });
     
       gsap.to(".office-2", {
         scrollTrigger: {
-          trigger: ".office-2",
+          trigger: ".office-posters-wrap",
           scrub: true,
           start: "center center",
-          end: "bottom -40%",
+          end: "bottom 0%",
           ease: "power2",
         },
-        y:"-980px",
+        y:"-580px",
       });
       
     // gsap.to(".office-1",{
@@ -89,7 +90,6 @@ $(function () {
     //     },
     //     top:"-280vh"
     // })
-});
 
 // Function to handle the scroll and zoom animation
 // function zoomOnScroll() {

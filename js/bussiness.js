@@ -1,29 +1,56 @@
-$(function () {
-    gsap.registerPlugin(ScrollTrigger);
-    
-  
-   
-    gsap.to("#section3",{
-        scrollTrigger:{
-            trigger:"#section3",
-            scrub:true,
-            // markers:true,
-            start:"top 0px",
-            end:"top -300%",
-            pin:true
-        },
-        top:"-0vh"
 
-    })
-    gsap.to(".section3-center-cover",{
-        scrollTrigger:{
-            trigger:"#section3",
-            scrub:true,
-            // markers:true,
-            start:"top 0%",
-            end:"top -300%",
-            // pin:true
-        },
-        top:"-280vh"
-    })
-});
+
+gsap.registerPlugin(ScrollTrigger);
+    
+const t1 = gsap.timeline({
+  scrollTrigger:{
+    trigger:".business-section",
+    scrub:true,
+    ease: "power2",
+    pin:true
+}
+
+})
+// t1.from(".image-card1",{
+//     y:'100%',
+//     duration:1
+// })
+t1.from(".text-card1",{
+  y:'100%',
+  duration:1,
+  opacity:0
+})
+t1.from(".image-card2",{
+    y:'100%',
+    duration:1,
+    opacity:1
+})
+t1.from(".text-card2",{
+  y:'100%',
+  duration:1,
+  opacity:0
+})
+
+
+    
+// gsap.to(".office-1", {
+//     scrollTrigger: {
+//       trigger: ".business-section",
+//       scrub: true,
+//       start: "center center",
+//       end: "bottom 0%",
+//       ease: "power2",
+//     },
+//     y:"-90px",
+//   });
+
+//   gsap.to(".office-2", {
+//     scrollTrigger: {
+//       trigger: ".business-section",
+//       scrub: true,
+//       start: "center center",
+//       end: "bottom 0%",
+//       ease: "power2",
+//     },
+//     y:"-580px",
+//   });
