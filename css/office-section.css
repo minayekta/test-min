@@ -2,34 +2,85 @@
   html,
 body {
     background:#e5e5e5 !important ;
-}
+  }
+  .zoom-section h2, .zoom-section h3, .office-section h4, .office-section p{
+    margin: 0;
+  }
   .zoom-section {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 940px;
 }
-
+.office-section .title-join{
+  font-size: 32px;
+font-weight: 700;
+text-align: center;
+color: #fff;
+}
 .zoom-text {
-    font-size: 64px;
+    font-size: 32px;
     text-align: center;
     cursor: pointer;
     transform-origin: center center;
 }
 /*  */
 .office-section{
-  height: 200px;
+  padding: 32px 0;
+  background:#000000 !important ;
+
+}
+.gray-card{
+  background: rgba(0, 0, 0, 0.40);
 }
 
  .card-office{
     padding: 32px !important;
     background-color: #fff;
-    height: 100%;
+    height: 449px;
     margin: auto;
 }
  .border-radius-card{
     border-radius: 20px !important;
 }
-.title-join{
-    margin-bottom: 80px;
+
+.trigger-connect{
+  overflow: hidden;
+}
+.bache{
+  position: absolute;
+}
+.office-posters-wrap{
+  position: relative;
+}
+.office-section .title-country{
+  font-size: 24px;
+  font-weight: 700;
+color: #5E5E5E;
+}
+.office-section .title-office-name{
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 32px;
+color: #5E5E5E;
+}
+.office-section .address{
+  font-size: 16px;
+color: #5E5E5E;
+margin-top: 8px;
+margin-bottom: 8px;
+}
+.office-section .tel{
+text-decoration: none;
+color: #b00000;
+font-size: 16px;
+}
+@media (min-width:768px) {
+  .zoom-text {
+    font-size: 64px;
+    text-align: center;
+    cursor: pointer;
+    transform-origin: center center;
+}
 }

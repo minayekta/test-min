@@ -28,7 +28,7 @@ t1.from(".image-card2",{
 t1.from(".text-card2",{
   y:'100%',
   duration:1,
-  opacity:0
+  opacity:1
 })
 
 

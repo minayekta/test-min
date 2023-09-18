@@ -9,64 +9,109 @@
           scrub: true,
           pin: true,
           start: "center center",
-          end: "+=1000",
+           end: "+=1000",
           ease: "power2",
         },
-        scale: 4.5,
+        scale: 2.5,
         opacity: 0,
-        height: 0,
+       
       });
     
-      gsap.to(".go-connect", {
-        scrollTrigger: {
-          trigger: ".go-connect",
-          scrub: true,
-          pin: true,
-          start: "center center",
-          end: "+=2500",
-          ease: "power2",
-        },
-      });
+      // gsap.to(".go-connect", {
+      //   scrollTrigger: {
+      //     trigger: ".go-connect",
+      //     scrub: true,
+      //     pin: true,
+      //     start: "center center",
+      //     end: "+=2500",
+      //     ease: "power2",
+      //   },
+      // });
     
  
 
       
-
-
-      gsap.to(".title-join", {
-        scrollTrigger: {
-          trigger: ".office-section",
-          scrub: true,
-          start: "center center",
-          end: "+=500",
+    
+      const t1 = gsap.timeline({
+        scrollTrigger:{
+          trigger:".office-section",
+          scrub:true,
           ease: "power2",
-         duration:1
-        },
-        y:"-20px",
-      });
+          pin:true
+      }
+      
+      })
+      t1.from(".content-title",{
+        y:'120%',
+        duration:10,
+        opacity:0
+      })
+      t1.from(".office-1",{
+        y:'100%',
+        duration:10,
+        opacity:1,
+        // delay:2
+      },)
+   
+      t1.from(".office-2",{
+          y:'100%',
+          duration:10,
+          opacity:0,
+        // delay:2
+      })
+      t1.from(".office-3",{
+        y:'100%',
+        duration:10,
+        opacity:1,
+        // delay:2
+      },)
+      t1.from(".office-4",{
+        y:'100%',
+        duration:10,
+        opacity:0,
+        // delay:2
+      },)
+      t1.from(".office-5",{
+        y:'100%',
+        duration:10,
+        opacity:1,
+        // delay:2
+      },)
+
+      // gsap.to(".title-join", {
+      //   scrollTrigger: {
+      //     trigger: ".office-section",
+      //     scrub: true,
+      //     start: "center center",
+      //     end: "+=500",
+      //     ease: "power2",
+      //    duration:1
+      //   },
+      //   y:"-20px",
+      // });
 
     
-      gsap.to(".office-1", {
-        scrollTrigger: {
-          trigger: ".office-posters-wrap",
-          scrub: true,
-          start: "center center",
-          end: "bottom 0%",
-          ease: "power2",
-        },
-        y:"-90px",
-      });
+      // gsap.to(".office-1", {
+      //   scrollTrigger: {
+      //     trigger: ".office-posters-wrap",
+      //     scrub: true,
+      //     start: "center center",
+      //     end: "bottom 0%",
+      //     ease: "power2",
+      //   },
+      //   y:"-90px",
+      // });
     
-      gsap.to(".office-2", {
-        scrollTrigger: {
-          trigger: ".office-posters-wrap",
-          scrub: true,
-          start: "center center",
-          end: "bottom 0%",
-          ease: "power2",
-        },
-        y:"-580px",
-      });
+      // gsap.to(".office-2", {
+      //   scrollTrigger: {
+      //     trigger: ".office-posters-wrap",
+      //     scrub: true,
+      //     start: "center center",
+      //     end: "bottom 0%",
+      //     ease: "power2",
+      //   },
+      //   y:"-580px",
+      // });
       
     // gsap.to(".office-1",{
     //     scrollTrigger:{
